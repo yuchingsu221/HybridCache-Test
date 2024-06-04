@@ -7,13 +7,11 @@
 **HybridCache** 是在 .NET 9 中引入的新快取庫，設計用來提供統一的快取 API，結合了本地快取和分佈式快取的優勢。以下是 HybridCache 的一些關鍵特性和功能：
 
 1. **統一 API**：提供單一 API 來管理本地和分佈式快取條目。
-2. **「羊群效應」保護**：防止多個並發請求觸發相同數據源的冗餘提取。
-3. **主要與次要快取**：使用主要快取（通常是本地快取）和可選的次要快取（分佈式快取）。
-4. **可配置序列化**：允許為不同數據類型使用不同的序列化方式。
-5. **與 .NET 整合**：內建於 .NET 平台，與其他 .NET 服務和庫無縫協作。
+2. **主要與次要快取**：使用主要快取（通常是本地快取）和可選的次要快取（分佈式快取）。
+3. **可配置序列化**：允許為不同數據類型使用不同的序列化方式。
+4. **與 .NET 整合**：內建於 .NET 平台，與其他 .NET 服務和庫無縫協作。
 
 **使用範例**：
-```csharp
 public class CacheService
 {
     private readonly HybridCache _cache;
@@ -38,7 +36,6 @@ public class CacheService
         return "fetched data";
     }
 }
-csharp```
 
 ## Redis
 Redis 是一個開源的內存數據結構存儲系統，常用作分佈式快取。Redis 以其高性能、靈活性和廣泛支持的數據結構而聞名。
@@ -50,7 +47,6 @@ Redis 是一個開源的內存數據結構存儲系統，常用作分佈式快�
 高可用性：提供複製、分片和自動故障轉移功能，確保高可用性和可靠性。
 使用範例：
 
-```csharp
 using StackExchange.Redis;
 
 public class RedisCacheService
