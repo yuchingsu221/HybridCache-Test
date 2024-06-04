@@ -38,7 +38,9 @@ public class CacheService
         return "fetched data";
     }
 }
-Redis
+csharp```
+
+## Redis
 Redis 是一個開源的內存數據結構存儲系統，常用作分佈式快取。Redis 以其高性能、靈活性和廣泛支持的數據結構而聞名。
 
 分佈式快取：主要用作分佈式快取，提供跨多節點的快速數據訪問。
@@ -48,8 +50,7 @@ Redis 是一個開源的內存數據結構存儲系統，常用作分佈式快�
 高可用性：提供複製、分片和自動故障轉移功能，確保高可用性和可靠性。
 使用範例：
 
-csharp
-Copy code
+```csharp
 using StackExchange.Redis;
 
 public class RedisCacheService
