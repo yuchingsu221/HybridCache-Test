@@ -12,8 +12,9 @@
 4. **與 .NET 整合**：內建於 .NET 平台，與其他 .NET 服務和庫無縫協作。
 
 **使用範例**：
-public class CacheService
-{
+
+    public class CacheService
+    {
     private readonly HybridCache _cache;
 
     public CacheService(HybridCache cache)
@@ -47,10 +48,10 @@ Redis 是一個開源的內存數據結構存儲系統，常用作分佈式快�
 高可用性：提供複製、分片和自動故障轉移功能，確保高可用性和可靠性。
 使用範例：
 
-using StackExchange.Redis;
+    using StackExchange.Redis;
 
-public class RedisCacheService
-{
+    public class RedisCacheService
+    {
     private readonly IDatabase _redisDatabase;
 
     public RedisCacheService(IConnectionMultiplexer redisConnection)
@@ -74,8 +75,9 @@ public class RedisCacheService
         await Task.Delay(50); // 模擬數據提取延遲
         return "fetched data";
     }
-}
-主要差異
+    }
+
+## 主要差異
 快取範圍：
 
 HybridCache：結合本地快取和分佈式快取於單一 API。
