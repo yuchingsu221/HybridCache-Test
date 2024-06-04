@@ -1,0 +1,6 @@
+@HybridCacheExample_HostAddress = http://localhost:5043
+
+GET {{HybridCacheExample_HostAddress}}/HybridCache/
+Accept: application/json
+
+###
